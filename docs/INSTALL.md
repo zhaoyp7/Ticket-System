@@ -104,7 +104,7 @@ Ticket-System/
 │       └── ...             # 工具类
 └── database/               # 数据文件目录（运行时生成）
     ├── UserData            # 用户数据
-    ├── UserDataPos         # 用户索引 (B+ 树)
+    ├── UserDataPos         # 用户索引
     ├── TrainData           # 车次数据
     ├── TrainDataPos        # 车次索引
     ├── TicketData          # 订单数据
@@ -120,7 +120,7 @@ Ticket-System/
 
 ### 4.1 克隆项目
 ```bash
-git clone <repository-url>
+git clone https://github.com/zhaoyp7/Ticket-System
 cd Ticket-System
 ```
 > 所有后续命令均在项目根目录 `Ticket-System/` 下执行。
@@ -128,7 +128,7 @@ cd Ticket-System
 ### 4.2 安装 Node.js 依赖
 ```bash
 cd backend
-npm install
+npm install express cors
 ```
 > 仅需 `express` 和 `cors` 两个依赖包。
 
