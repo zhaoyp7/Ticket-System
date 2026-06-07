@@ -62,7 +62,7 @@
 
 ```bash
 # 克隆项目
-git clone <repo-url> && cd Ticket-System
+git clone https://github.com/zhaoyp7/Ticket-System && cd Ticket-System
 
 # 安装 Node.js 依赖
 cd backend && npm install
