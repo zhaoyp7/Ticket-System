@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>火车票管理系统</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="nav" id="nav">
+      <a href="#" onclick="navigate('home')">首页</a>
+    </div>
+  </div>
+  <div class="container" id="app">
+    <h2>火车票管理系统</h2>
+    <div class="card">加载中...</div>
+  </div>
+  <script>
+    window._appErrors = [];
+    window.addEventListener("error", function (e) {
+      window._appErrors.push(e.message);
+      var el = document.getElementById("app");
+      if (el) el.innerHTML = '<h2>JS 加载错误</h2><div class="card"><p class="error">' + e.message + '</p><p>请检查浏览器控制台 (F12)</p></div>';
+    });
+  </script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/ticket.js"></script>
+  <script src="js/order.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    if (typeof navigate === "function") {
+      navigate("home");
+    } else {
+      document.getElementById("app").innerHTML = '<h2>初始化失败</h2><div class="card"><p class="error">navigate 函数未定义，可能 JS 文件加载失败。请检查网络连接或刷新页面。</p><p>错误数: ' + window._appErrors.length + '</p></div>';
+    }
+  </script>
+</body>
+
+</html>
